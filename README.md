@@ -1,6 +1,3 @@
-
-
-Ai oqutuvchi · HTML
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -17,87 +14,87 @@ Ai oqutuvchi · HTML
   --text2:#94a3b8;--text3:#4a5568;--radius:16px;
 }
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
- 
+
 /* ===== AUTH SCREENS ===== */
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative;overflow:hidden}
 .auth-wrap::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -20%,rgba(124,111,255,0.18),transparent),radial-gradient(ellipse 60% 50% at 80% 80%,rgba(56,189,248,0.1),transparent);pointer-events:none}
- 
+
 .auth-card{background:var(--bg2);border:1px solid var(--border);border-radius:24px;padding:40px 36px;width:100%;max-width:420px;position:relative;z-index:1;box-shadow:0 24px 60px rgba(0,0,0,0.4)}
- 
+
 .auth-logo{text-align:center;margin-bottom:28px}
 .auth-logo .logo-icon{width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,var(--accent),var(--accent3));display:inline-flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:14px;box-shadow:0 8px 24px rgba(124,111,255,0.35)}
 .auth-logo h1{font-size:24px;font-weight:800;background:linear-gradient(135deg,var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .auth-logo p{font-size:13px;color:var(--text2);margin-top:4px}
- 
+
 .auth-tabs{display:flex;background:var(--bg3);border-radius:12px;padding:4px;margin-bottom:24px;gap:4px}
 .auth-tab{flex:1;padding:9px;border-radius:9px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:transparent;color:var(--text2);transition:all 0.2s}
 .auth-tab.active{background:var(--card2);color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
- 
+
 .social-btns{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
 .social-btn{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);cursor:pointer;font-size:14px;font-weight:500;color:var(--text);display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.2s}
 .social-btn:hover{border-color:var(--accent);background:var(--card2);transform:translateY(-1px)}
 .social-btn svg{width:20px;height:20px;flex-shrink:0}
- 
+
 .divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--text3);font-size:12px}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
- 
+
 .form-group{margin-bottom:14px}
 .form-label{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px;display:block}
 .form-input{width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid var(--border);background:var(--card);color:var(--text);font-size:14px;outline:none;transition:border-color 0.2s;font-family:'Inter',sans-serif}
 .form-input:focus{border-color:var(--accent)}
 .form-input::placeholder{color:var(--text3)}
- 
+
 .form-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .checkbox-wrap{display:flex;align-items:center;gap:7px;cursor:pointer}
 .checkbox-wrap input{accent-color:var(--accent);width:15px;height:15px}
 .checkbox-wrap span{font-size:13px;color:var(--text2)}
 .forgot-link{font-size:13px;color:var(--accent2);cursor:pointer;text-decoration:none}
 .forgot-link:hover{text-decoration:underline}
- 
+
 .auth-btn{width:100%;padding:13px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent3));color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;margin-bottom:16px}
 .auth-btn:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 8px 20px rgba(124,111,255,0.35)}
 .auth-btn:active{transform:scale(0.98)}
- 
+
 .auth-footer{text-align:center;font-size:13px;color:var(--text2)}
 .auth-footer a{color:var(--accent2);cursor:pointer}
 .auth-footer a:hover{text-decoration:underline}
- 
+
 .terms{font-size:11px;color:var(--text3);text-align:center;margin-top:16px;line-height:1.6}
 .terms a{color:var(--text3);text-decoration:underline;cursor:pointer}
- 
+
 /* ERROR / SUCCESS */
 .msg-box{padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:14px;display:none}
 .msg-box.error{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#fca5a5}
 .msg-box.success{background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);color:#86efac}
 .msg-box.show{display:block}
- 
+
 /* USER AVATAR in top */
 .user-chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:5px 12px 5px 5px;cursor:pointer;transition:all 0.2s}
 .user-chip:hover{border-color:var(--accent)}
 .user-chip .uc-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--pink));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
 .user-chip .uc-name{font-size:13px;font-weight:500;color:var(--text);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- 
+
 /* DROPDOWN */
 .user-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:6px;min-width:180px;z-index:200;box-shadow:0 12px 32px rgba(0,0,0,0.4)}
 .ud-item{padding:9px 12px;border-radius:9px;cursor:pointer;font-size:13px;color:var(--text2);display:flex;align-items:center;gap:8px;transition:all 0.15s}
 .ud-item:hover{background:var(--card2);color:var(--text)}
 .ud-item.danger:hover{color:var(--red);background:rgba(239,68,68,0.08)}
 .ud-sep{height:1px;background:var(--border);margin:4px 0}
- 
+
 /* ===== MAIN APP ===== */
 #app{display:none}
 .layout{display:flex;min-height:100vh}
- 
+
 .sidebar{width:255px;min-height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:16px 0;flex-shrink:0;transition:transform 0.3s}
 .logo-wrap{padding:0 16px 16px;border-bottom:1px solid var(--border);margin-bottom:12px}
 .logo-wrap h1{font-size:18px;font-weight:800;background:linear-gradient(135deg,var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .logo-wrap span{font-size:11px;color:var(--text3)}
- 
+
 .sb-section{padding:0 10px;margin-bottom:8px}
 .sb-label{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:0 6px;margin-bottom:6px}
 .new-btn{width:100%;padding:9px 12px;border-radius:10px;border:1px dashed var(--border);background:transparent;color:var(--accent2);cursor:pointer;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;transition:all 0.2s;margin-bottom:14px}
 .new-btn:hover{background:rgba(124,111,255,0.08);border-color:var(--accent)}
- 
+
 .recents-list{display:flex;flex-direction:column;gap:2px;max-height:280px;overflow-y:auto}
 .r-item{padding:8px 10px;border-radius:9px;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all 0.15s;border:1px solid transparent}
 .r-item:hover{background:var(--card);border-color:var(--border)}
@@ -109,10 +106,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .r-item:hover .r-del{opacity:1}
 .r-del:hover{color:var(--red)!important;background:rgba(239,68,68,0.1)}
 .no-rec{font-size:12px;color:var(--text3);text-align:center;padding:12px}
- 
+
 .sb-bottom{margin-top:auto;padding:12px 10px 0;border-top:1px solid var(--border)}
 .ver{font-size:10px;color:var(--text3);text-align:center}
- 
+
 .main{flex:1;display:flex;flex-direction:column;min-width:0}
 .topnav{padding:12px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;background:var(--bg2);position:relative}
 .menu-btn{display:none;background:none;border:none;color:var(--text);font-size:20px;cursor:pointer}
@@ -120,20 +117,20 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .online-b{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);background:rgba(34,197,94,0.08);padding:4px 10px;border-radius:999px;border:1px solid rgba(34,197,94,0.15)}
 .online-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
- 
+
 .subjects-bar{padding:12px 20px;border-bottom:1px solid var(--border);background:var(--bg3)}
 .subjects{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
 .subjects::-webkit-scrollbar{display:none}
 .s-btn{border:1px solid var(--border);background:var(--card);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--text2);transition:all 0.18s;white-space:nowrap;flex-shrink:0}
 .s-btn:hover{border-color:var(--accent);color:var(--text)}
 .s-btn.active{background:rgba(124,111,255,0.15);border-color:var(--accent);color:var(--accent2);font-weight:600}
- 
+
 .chat-area{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
 .welcome-s{text-align:center;padding:40px 20px;color:var(--text2)}
 .w-icon{font-size:44px;margin-bottom:10px}
 .welcome-s h2{font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px}
 .welcome-s p{font-size:13px;line-height:1.6}
- 
+
 .msg{display:flex;gap:10px;align-items:flex-start;animation:fadeIn 0.22s ease}
 .msg.user{flex-direction:row-reverse}
 @keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
@@ -149,16 +146,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .loading-dots span:nth-child(2){animation-delay:0.2s}
 .loading-dots span:nth-child(3){animation-delay:0.4s}
 @keyframes blink{0%,80%,100%{opacity:0.2}40%{opacity:1}}
- 
+
 .quick-area{padding:6px 20px 0;display:flex;flex-wrap:wrap;gap:5px}
 .q-btn{font-size:11px;padding:5px 12px;border-radius:999px;border:1px solid var(--border);background:var(--card);cursor:pointer;color:var(--text2);transition:all 0.15s}
 .q-btn:hover{border-color:var(--accent);color:var(--accent2);background:rgba(124,111,255,0.08)}
- 
+
 .media-preview{padding:6px 20px 0;display:flex;flex-wrap:wrap;gap:7px}
 .m-thumb{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
 .m-thumb img,.m-thumb video{width:72px;height:72px;object-fit:cover;display:block}
 .m-del{position:absolute;top:3px;right:3px;background:rgba(0,0,0,0.65);border:none;color:#fff;width:17px;height:17px;border-radius:50%;cursor:pointer;font-size:9px;display:flex;align-items:center;justify-content:center}
- 
+
 .input-area{padding:12px 20px;border-top:1px solid var(--border);background:var(--bg2)}
 .input-tools{display:flex;gap:6px;margin-bottom:8px}
 .t-btn{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 12px;cursor:pointer;color:var(--text2);font-size:11px;display:flex;align-items:center;gap:5px;transition:all 0.15s}
@@ -171,7 +168,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .send-b{padding:11px 18px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent3));color:#fff;cursor:pointer;font-size:13px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all 0.15s}
 .send-b:hover{opacity:0.9;transform:translateY(-1px)}
 .send-b:disabled{background:var(--card2);color:var(--text3);cursor:not-allowed;transform:none}
- 
+
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:99}
 @media(max-width:680px){
   .sidebar{position:fixed;left:0;top:0;bottom:0;z-index:100;transform:translateX(-100%)}
@@ -182,7 +179,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 </style>
 </head>
 <body>
- 
+
 <!-- ===== LOGIN PAGE ===== -->
 <div id="login-page">
 <div class="auth-wrap">
@@ -192,14 +189,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <h1>Baxodir AI</h1>
       <p>Ko'p fanli AI o'qituvchi</p>
     </div>
- 
+
     <div class="auth-tabs">
       <button class="auth-tab active" onclick="switchTab('login')">Kirish</button>
       <button class="auth-tab" onclick="switchTab('register')">Ro'yxatdan o'tish</button>
     </div>
- 
+
     <div id="msg-box" class="msg-box"></div>
- 
+
     <!-- SOCIAL -->
     <div class="social-btns">
       <button class="social-btn" onclick="socialLogin('google')">
@@ -211,9 +208,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         Apple bilan kirish
       </button>
     </div>
- 
+
     <div class="divider">yoki</div>
- 
+
     <!-- LOGIN FORM -->
     <div id="login-form">
       <div class="form-group">
@@ -234,7 +231,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <button class="auth-btn" onclick="doLogin()">Kirish</button>
       <div class="auth-footer">Hisob yo'qmi? <a onclick="switchTab('register')">Ro'yxatdan o'tish</a></div>
     </div>
- 
+
     <!-- REGISTER FORM -->
     <div id="register-form" style="display:none">
       <div class="form-group">
@@ -252,19 +249,19 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       <button class="auth-btn" onclick="doRegister()">Ro'yxatdan o'tish</button>
       <div class="auth-footer">Hisobingiz bormi? <a onclick="switchTab('login')">Kirish</a></div>
     </div>
- 
+
     <div class="terms">
       Davom etish orqali siz <a>Foydalanish shartlari</a> va <a>Maxfiylik siyosati</a>ga rozilik bildirasiz.
     </div>
   </div>
 </div>
 </div>
- 
+
 <!-- ===== MAIN APP ===== -->
 <div id="app">
 <div class="layout">
   <div class="overlay" id="overlay" onclick="closeSB()"></div>
- 
+
   <div class="sidebar" id="sidebar">
     <div class="logo-wrap">
       <h1>🎓 Baxodir AI</h1>
@@ -277,7 +274,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     </div>
     <div class="sb-bottom"><div class="ver">⚡ Baxodir AI v2.0</div></div>
   </div>
- 
+
   <div class="main">
     <div class="topnav">
       <button class="menu-btn" onclick="toggleSB()">☰</button>
@@ -295,7 +292,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         </div>
       </div>
     </div>
- 
+
     <div class="subjects-bar">
       <div class="subjects">
         <button class="s-btn active" data-id="english" onclick="selSub(this)"><span>🇬🇧</span> Ingliz tili</button>
@@ -306,7 +303,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <button class="s-btn" data-id="history" onclick="selSub(this)"><span>🏛️</span> Tarix</button>
       </div>
     </div>
- 
+
     <div class="chat-area" id="chat-area">
       <div class="welcome-s">
         <div class="w-icon">🎓</div>
@@ -314,10 +311,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <p>Fan tanlang va savolingizni yozing.<br>Rasm yoki video ham yuborishingiz mumkin.</p>
       </div>
     </div>
- 
+
     <div class="quick-area" id="quick-area"></div>
     <div class="media-preview" id="media-preview"></div>
- 
+
     <div class="input-area">
       <div class="input-tools">
         <label class="t-btn">🖼️ Rasm<input type="file" accept="image/*" multiple onchange="handleMedia(event,'image')"></label>
@@ -331,30 +328,30 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   </div>
 </div>
 </div>
- 
+
 <script>
 // ===== AUTH =====
 const USERS_KEY = 'baxodir_users';
 const SESSION_KEY = 'baxodir_session';
- 
+
 function getUsers(){ return JSON.parse(localStorage.getItem(USERS_KEY)||'[]'); }
 function saveUsers(u){ localStorage.setItem(USERS_KEY, JSON.stringify(u)); }
 function getSession(){ return JSON.parse(localStorage.getItem(SESSION_KEY)||'null'); }
 function setSession(u){ localStorage.setItem(SESSION_KEY, JSON.stringify(u)); }
 function clearSession(){ localStorage.removeItem(SESSION_KEY); }
- 
+
 function showMsg(text, type='error'){
   const b = document.getElementById('msg-box');
   b.textContent = text; b.className = 'msg-box '+type+' show';
   setTimeout(()=>b.classList.remove('show'), 3500);
 }
- 
+
 function switchTab(t){
   document.querySelectorAll('.auth-tab').forEach((el,i)=>el.classList.toggle('active', (i===0&&t==='login')||(i===1&&t==='register')));
   document.getElementById('login-form').style.display = t==='login'?'block':'none';
   document.getElementById('register-form').style.display = t==='register'?'block':'none';
 }
- 
+
 function doLogin(){
   const email = document.getElementById('login-email').value.trim();
   const pass = document.getElementById('login-pass').value;
@@ -365,7 +362,7 @@ function doLogin(){
   setSession(user);
   enterApp(user);
 }
- 
+
 function doRegister(){
   const name = document.getElementById('reg-name').value.trim();
   const email = document.getElementById('reg-email').value.trim();
@@ -381,7 +378,7 @@ function doRegister(){
   showMsg('Muvaffaqiyatli ro\'yxatdan o\'tdingiz!','success');
   setTimeout(()=>enterApp(user), 800);
 }
- 
+
 function socialLogin(provider){
   const providerName = provider==='google'?'Google':'Apple';
   const fakeName = provider==='google'?'Google Foydalanuvchi':'Apple Foydalanuvchi';
@@ -395,7 +392,7 @@ function socialLogin(provider){
   setSession(user);
   enterApp(user);
 }
- 
+
 function showForgot(){
   const email = document.getElementById('login-email').value.trim();
   if(!email){showMsg('Avval emailingizni kiriting');return;}
@@ -404,11 +401,11 @@ function showForgot(){
   if(!user){showMsg('Bu email topilmadi');return;}
   showMsg('Parol: '+user.pass+' (demo rejim)','success');
 }
- 
+
 function doLogout(){
   clearSession(); location.reload();
 }
- 
+
 function enterApp(user){
   document.getElementById('login-page').style.display='none';
   document.getElementById('app').style.display='block';
@@ -417,7 +414,7 @@ function enterApp(user){
   renderRecents();
   updateQuick();
 }
- 
+
 function toggleDD(){
   const dd = document.getElementById('user-dd');
   dd.style.display = dd.style.display==='none'?'block':'none';
@@ -431,13 +428,13 @@ function openProfile(){
   if(u) alert('👤 Profil\n\nIsm: '+u.name+'\nEmail: '+u.email+'\nKirish usuli: '+u.provider);
   document.getElementById('user-dd').style.display='none';
 }
- 
+
 // Check session on load
 window.addEventListener('DOMContentLoaded',()=>{
   const s = getSession();
   if(s) enterApp(s);
 });
- 
+
 // ===== SUBJECTS =====
 const subjects = {
   english:{name:"Ingliz tili",emoji:"🇬🇧",system:"Sen ingliz tili o'qituvchisisn. O'zbek tilida javob ber.",quick:["Grammar nima?","Present Perfect misollar","5 ta yangi so'z"]},
@@ -447,11 +444,11 @@ const subjects = {
   medicine:{name:"Medetsina",emoji:"🏥",system:"Sen tibbiyot yordamchisisn. O'zbek tilida javob ber. Kasalliklar, simptomlar haqida tushuntir. Bu professional tibbiy maslahat emas deb eslatib tur.",quick:["Gripp alomatlari","Qon bosimi","Vitamin D nima uchun?"]},
   history:{name:"Tarix",emoji:"🏛️",system:"Sen tarix o'qituvchisisn. O'zbek tilida javob ber.",quick:["Amir Temur kim?","Ipak yo'li","O'zbekiston mustaqilligi"]}
 };
- 
+
 let curSub='english', chatHist=[], pendMedia=[];
 const RECENTS_KEY='baxodir_recents_v2';
 let allRecents=JSON.parse(localStorage.getItem(RECENTS_KEY)||'[]');
- 
+
 function renderRecents(){
   const list=document.getElementById('recents-list');
   if(!allRecents.length){list.innerHTML='<div class="no-rec">Hali suhbat yo\'q</div>';return;}
@@ -462,7 +459,7 @@ function renderRecents(){
       <span class="r-del" onclick="event.stopPropagation();delRecent(${allRecents.length-1-i})">✕</span>
     </div>`).join('');
 }
- 
+
 function saveRecent(){
   if(!chatHist.length) return;
   const fu=chatHist.find(m=>m.role==='user');
@@ -474,7 +471,7 @@ function saveRecent(){
   localStorage.setItem(RECENTS_KEY,JSON.stringify(allRecents));
   renderRecents();
 }
- 
+
 function loadRecent(i){
   const r=allRecents[i];if(!r)return;
   curSub=r.subject;chatHist=r.history||[];
@@ -483,11 +480,11 @@ function loadRecent(i){
   document.getElementById('chat-area').innerHTML=r.html||'';
   updateQuick();closeSB();
 }
- 
+
 function delRecent(i){allRecents.splice(i,1);localStorage.setItem(RECENTS_KEY,JSON.stringify(allRecents));renderRecents();}
- 
+
 function newChat(){if(chatHist.length)saveRecent();chatHist=[];pendMedia=[];document.getElementById('media-preview').innerHTML='';document.getElementById('chat-area').innerHTML='<div class="welcome-s"><div class="w-icon">🎓</div><h2>Yangi suhbat</h2><p>Savolingizni yozing!</p></div>';closeSB();}
- 
+
 function selSub(btn){
   if(chatHist.length)saveRecent();chatHist=[];
   document.querySelectorAll('.s-btn').forEach(b=>b.classList.remove('active'));
@@ -497,16 +494,16 @@ function selSub(btn){
   document.getElementById('chat-area').innerHTML=`<div class="welcome-s"><div class="w-icon">${s.emoji}</div><h2>${s.name}</h2><p>Savolingizni yozing yoki quyidagi mavzulardan birini tanlang.</p></div>`;
   updateQuick();
 }
- 
+
 function updateQuick(){
   const s=subjects[curSub];
   document.getElementById('quick-area').innerHTML=(s.quick||[]).map(q=>`<button class="q-btn" onclick="quickAsk(this)">${q}</button>`).join('');
 }
- 
+
 function quickAsk(btn){document.getElementById('user-input').value=btn.textContent;sendMsg();}
 function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,110)+'px';}
 function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg();}}
- 
+
 function handleMedia(e,type){
   Array.from(e.target.files).forEach(file=>{
     const r=new FileReader();
@@ -514,7 +511,7 @@ function handleMedia(e,type){
     r.readAsDataURL(file);
   });e.target.value='';
 }
- 
+
 function renderMediaPrev(){
   document.getElementById('media-preview').innerHTML=pendMedia.map((m,i)=>`
     <div class="m-thumb">
@@ -522,9 +519,9 @@ function renderMediaPrev(){
       <button class="m-del" onclick="removeMedia(${i})">✕</button>
     </div>`).join('');
 }
- 
+
 function removeMedia(i){pendMedia.splice(i,1);renderMediaPrev();}
- 
+
 function addMsg(role,text,media){
   const area=document.getElementById('chat-area');
   area.querySelector('.welcome-s')?.remove();
@@ -533,7 +530,7 @@ function addMsg(role,text,media){
   d.innerHTML=`<div class="av ${role}">${role==='ai'?'B':'S'}</div><div class="bubble">${text}${mediaHtml}</div>`;
   area.appendChild(d);area.scrollTop=area.scrollHeight;return d;
 }
- 
+
 async function sendMsg(){
   const inp=document.getElementById('user-input');
   const btn=document.getElementById('send-btn');
@@ -542,7 +539,7 @@ async function sendMsg(){
   const media=[...pendMedia];pendMedia=[];document.getElementById('media-preview').innerHTML='';
   addMsg('user',text||'📎 Media',media);
   inp.value='';inp.style.height='auto';btn.disabled=true;
- 
+
   let content;
   if(media.length){
     content=[];
@@ -550,12 +547,12 @@ async function sendMsg(){
     content.push({type:'text',text:text||'Bu rasmdagi nima? Tushuntir.'});
   } else {content=text;}
   chatHist.push({role:'user',content});
- 
+
   const area=document.getElementById('chat-area');
   const ld=document.createElement('div');ld.className='msg ai';
   ld.innerHTML=`<div class="av ai">B</div><div class="bubble"><div class="loading-dots"><span></span><span></span><span></span></div></div>`;
   area.appendChild(ld);area.scrollTop=area.scrollHeight;
- 
+
   try{
     const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:subjects[curSub].system,messages:chatHist})});
     const data=await res.json();
@@ -565,10 +562,9 @@ async function sendMsg(){
   }catch(e){ld.remove();addMsg('ai','❌ Xatolik yuz berdi.');}
   btn.disabled=false;inp.focus();
 }
- 
+
 function toggleSB(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('show');}
 function closeSB(){document.getElementById('sidebar').classList.remove('open');document.getElementById('overlay').classList.remove('show');}
 </script>
 </body>
 </html>
- 
